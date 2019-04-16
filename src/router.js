@@ -13,6 +13,9 @@ const router = new VueRouter({
     },
     { 
       path:'/overseas',component:()=>import('./views/Overseas.vue')
+    },
+    { 
+      path:'/perform',component:()=>import('./views/Perform.vue')
     }
   ]
 })
