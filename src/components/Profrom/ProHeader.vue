@@ -16,17 +16,20 @@
 
 <style lang="less">
     #prohead{
-        display: fixed;
+        position: fixed;
         top: 0;
+        left: 0;
         left: 0;
         overflow-x: auto;
         overflow-y: hidden;
         height: 50px;
+        background-color:#fff;
+        z-index: 99;
         .pro-head{
             display:flex;
             align-items: center;
             .head-item{
-                height: 32px;
+                height: 38px;
                 flex: 1 0 auto;
                 box-sizing: border-box;
                 margin: 0 10px;
@@ -42,7 +45,7 @@
                     width: 25px;
                     -webkit-transform: translateX(-50%);
                     transform: translateX(-50%);
-                    height: 2px;
+                    height: 1px;
                     background: #ff1268;
                     border-radius: 1px;
                 }
