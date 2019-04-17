@@ -36,6 +36,10 @@ export default {
         padding: 0 15px;
         overflow-x: auto;
         overflow-y: hidden;
+        &::-webkit-scrollbar { //去除滚动条，设置滚动条的背景颜色为透明 
+            background-color: transparent;
+            display:none;
+        }
         .star-list{
             display: flex;
             flex-wrap: nowrap;
