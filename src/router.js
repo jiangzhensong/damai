@@ -15,11 +15,18 @@ const router = new VueRouter({
       path:'/overseas',component:()=>import('./views/Overseas.vue')
     },
     { 
-      path:'/perform',component:()=>import('./views/Perform.vue')
+      path:'/perform/:id',component:()=>import('./views/Perform.vue')
+    },
+    { 
+      path:'/perform',component:()=>import('./views/Perform.vue'),
+      children:[
+        {path:'',redirect:'/Perform/quanbu'}
+      ]
     },
     {
       path:'/detail',component:()=>import('./views/Detailitem.vue')
-    }
+    },
+
   ]
 })
 

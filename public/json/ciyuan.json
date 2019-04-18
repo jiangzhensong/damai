@@ -1,0 +1,95 @@
+{
+    "api": "mtop.damai.wireless.search.search",
+    "data": {
+        "projectInfo": [
+            {
+                "promotionTags": [],
+                "logicLabelInfo": {},
+                "siteStatus": 3,
+                "latitude": 31.855516,
+                "isEticket": false,
+                "recReasonType": 2,
+                "type": "0",
+                "categoryName": "二次元",
+                "priceLow": "50",
+                "cityName": "合肥",
+                "subTitle": "春之童年",
+                "venueId": 93020,
+                "subHead": "【万有音乐系】宫崎骏2019动漫视听音乐会系列——春之童年合肥站",
+                "id": 173024,
+                "isSelectSeat": true,
+                "longitude": 117.36027,
+                "venueCity": "合肥",
+                "actores": "",
+                "nearestPerformTime": 1555846200000,
+                "isNewItem": 0,
+                "showTag": "",
+                "showTime": "2019.04.21 19:30",
+                "showStatus": {
+                    "id": 0,
+                    "desc": "去购票"
+                },
+                "logicAddress": "合肥",
+                "ipvuv": 341,
+                "isAtmospheric": false,
+                "venueName": "合肥市瑶海大剧院",
+                "priceStr": "50-280",
+                "isGeneralAgent": false,
+                "tourProjects": [],
+                "name": "【万有音乐系】宫崎骏2019动漫视听音乐会系列——春之童年合肥站",
+                "verticalPic": "https://pimg.dmcdn.cn/perform/project/1730/173024_n.jpg?_t=1546497999429",
+                "formattedPriceStr": "50-280"
+            },
+            {
+                "promotionTags": [
+                    "套票"
+                ],
+                "logicLabelInfo": {},
+                "siteStatus": 3,
+                "latitude": 24.981253,
+                "isEticket": false,
+                "recReasonType": 2,
+                "type": "0",
+                "categoryName": "二次元",
+                "priceLow": "80",
+                "cityName": "昆明",
+                "subTitle": "宫崎骏·久石让动漫视听系列主题音乐会",
+                "venueId": 1380012,
+                "subHead": "宫崎骏•久石让：日本动漫音乐史上的不朽传奇！",
+                "id": 173929,
+                "isSelectSeat": true,
+                "longitude": 102.661858,
+                "venueCity": "昆明",
+                "actores": "",
+                "nearestPerformTime": 1561291200000,
+                "isNewItem": 0,
+                "showTag": "",
+                "showTime": "2019.06.23 20:00",
+                "showStatus": {
+                    "id": 0,
+                    "desc": "去购票"
+                },
+                "logicAddress": "昆明",
+                "ipvuv": 139,
+                "isAtmospheric": false,
+                "venueName": "昆明怡景园度假酒店多功能厅",
+                "priceStr": "80-466",
+                "isGeneralAgent": false,
+                "tourProjects": [],
+                "name": "【万有音乐系】“千与千寻”宫崎骏·久石让动漫视听系列主题音乐会--昆明站",
+                "verticalPic": "https://pimg.dmcdn.cn/perform/project/1739/173929_n.jpg?_t=1547721701388",
+                "formattedPriceStr": "80-466"
+            }
+        ],
+        "total": 2,
+        "discountInfo": "",
+        "_prism_lk": {
+            "_qid": "522b73f6-61a8-11e9-8103-27066bcec333",
+            "_skey": "522b73f5-61a8-11e9-8103-73eb55c3b143"
+        }
+    },
+    "ret": [
+        "SUCCESS::调用成功"
+    ],
+    "v": "1.0"
+}

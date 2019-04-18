@@ -2,13 +2,13 @@
     <div class="wrap-attention">
         <ul class="star-list">
             <li class="star-list-conment"
-                v-for="item in 5"
-                :key="item"
+                v-for="(item,index) in starLists"
+                :key="index"
             >
-                <img src="https://intercms.damai.cn/artist/pic/1547626487740/1547626487740-main.jpg" title="">
-                <div class="attention">3.55万关注</div>
-                <div class="name">Troye Sivan</div>
-                <div class="city">上海 / 香港 / 新加坡</div>
+                <img :src="item.artPic" title="">
+                <div class="attention">{{item.artFans}}人关注</div>
+                <div class="name">{{item.name}}</div>
+                <div class="city">{{item.city}}</div>
             </li>
         </ul>
     </div>
@@ -17,13 +17,27 @@
 <script>
 import Axios from 'axios';
 export default {
-    // methods:{
-    //     getStarList(){
-    //         Axios.get('',{
-
-    //         })
-    //     }
-    // }
+    data(){
+        return{
+            starLists:[]
+        }
+    },
+    methods:{
+        getStarList(){
+            Axios.get('/json/sharlist.json').then(res=>{
+                let data = res.data
+                this.starLists=data.data.artistProjectList
+                let cityarr = data.data.artistProjectList;
+                for(let i=0;i<cityarr.length;i++){
+                    var thecitylis = cityarr[i].citySet.join("/")
+                    this.starLists[i].city = thecitylis;
+                }
+            })
+        }
+    },
+    created(){
+        this.getStarList();
+    }
 }
 </script>
 
@@ -82,6 +96,13 @@ export default {
                     line-height: 10px;
                     color: #888;
                     margin-top: 10px;
+
+
+                    width: 110px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    text-align: center;
                 }
             }
         }

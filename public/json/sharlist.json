@@ -1,0 +1,73 @@
+{
+    "api": "mtop.damai.wireless.search.search.artistproject.get",
+    "data": {
+        "artistProjectList": [
+            {
+                "artFans": 35657,
+                "artPic": "https://intercms.damai.cn/artist/pic/1547626487740/1547626487740-main.jpg",
+                "artistId": 71877,
+                "artistName": "Troye Sivan",
+                "citySet": [
+                    "新加坡",
+                    "上海",
+                    "香港",
+                    "曼谷"
+                ],
+                "performanceTotal": 5,
+                "status": 0
+            },
+            {
+                "artFans": 1121,
+                "artPic": "https://intercms.damai.cn/artist/pic/1534413374922/1534413374922-main.jpg",
+                "artistId": 55078,
+                "artistName": "Backstreet Boys",
+                "citySet": [
+                    "澳门"
+                ],
+                "performanceTotal": 1,
+                "status": 0
+            },
+            {
+                "artFans": 13321,
+                "artPic": "https://intercms.damai.cn/artist/pic/1534413405281/1534413405281-main.jpg",
+                "artistId": 1935,
+                "artistName": "伍佰",
+                "citySet": [
+                    "澳门",
+                    "上海",
+                    "昆明",
+                    "杭州",
+                    "深圳"
+                ],
+                "performanceTotal": 5,
+                "status": 0
+            },
+            {
+                "artFans": 1199,
+                "artPic": "https://intercms.damai.cn/artist/pic/1551951183090/1551951183090-main.jpg",
+                "artistId": 72143,
+                "artistName": "赖冠霖",
+                "citySet": [
+                    "香港"
+                ],
+                "performanceTotal": 1,
+                "status": 0
+            },
+            {
+                "artFans": 717,
+                "artPic": "https://intercms.damai.cn/artist/pic/1534413350357/1534413350357-main.jpg",
+                "artistId": 71937,
+                "artistName": "郑秀妍",
+                "citySet": [
+                    "澳门"
+                ],
+                "performanceTotal": 1,
+                "status": 0
+            }
+        ]
+    },
+    "ret": [
+        "SUCCESS::调用成功"
+    ],
+    "v": "1.0"
+}

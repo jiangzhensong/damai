@@ -9,21 +9,46 @@
         </div>
         <ul class="list-info">
             <li class="list-info-item"
-                v-for="item in 10"
-                :key="item"
+                v-for="(item,index) in showList"
+                :key="index"
             >
                 <router-link class="item-img" to="">
-                    <img src="https://pimg.dmcdn.cn/perform/project/1765/176587_n.jpg?_t=1554286296989">
+                    <img :src="item.verticalPic">
                 </router-link>
                 <div class="item-info">
-                    <div class="info-title">AIA呈獻：2019国际冠军杯足球赛新加坡站</div>
-                    <div class="info-city">新加坡 / 2019年07月20日-21日19：30（当地时间） / 新加坡国家体育场Singapore National Stadium</div>
-                    <div class="price">￥210-1890</div>
+                    <div class="info-title">{{item.name}}</div>
+                    <div class="info-city">{{item.venueCity}} / {{item.showTime}} / {{item.venueName}}</div>
+                    <div class="price">￥{{item.priceStr}}</div>
                 </div>
             </li>
         </ul>
     </div>
 </template>
+
+<script>
+import axios from 'axios'
+export default {
+    data(){
+        return{
+            showList:[]
+        }
+    },
+    methods:{
+        getShwoList(){
+            axios.get('/json/starListss.json').then(res=>{
+                let data = res.data
+                this.showList = res.data.data.currentCity
+                console.log(this.showList);
+            })
+        }
+    },
+    created(){
+        this.getShwoList();
+    }
+}
+</script>
+
+
 <style lang="less">
     #WrapList{
         padding: 0 15px;

@@ -3,16 +3,29 @@
         <h2 class="wrap-title">热门目的地</h2>
         <ul class="wrap-adlist">
             <li class="wrap-adlist-item"
-                v-for="item in 3"
-                :key="item"
+                v-for="(item,index) in imglist"
+                :key="index"
             >
                 <router-link to="">
-                    <img src="//img.alicdn.com/tps/i4/TB1WsMKuyAnBKNjSZFvSuuTKXXa.jpg"/>
+                    <img :src="item"/>
                 </router-link>
             </li>
         </ul>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            imglist:[
+                "//img.alicdn.com/tps/i4/TB1WsMKuyAnBKNjSZFvSuuTKXXa.jpg",
+                "//img.alicdn.com/tps/i4/TB17o4VuCYTBKNjSZKbSutJ8pXa.jpg",
+                "//img.alicdn.com/tps/i4/TB1YzOFLW6qK1RjSZFmSut0PFXa.jpg",
+            ]
+        }
+    }
+}
+</script>
 
 <style lang="less">
     .overwrap{

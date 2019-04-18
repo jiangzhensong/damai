@@ -2,22 +2,63 @@
     <div id="miushead">
         <div class="miu-title">
             <div class="miu-title-item"
-                v-for="item in 4"
-                :key="item"
+                v-for="(item,index) in theList"
+                :key="index"
             >
-                全部时间
+                {{item}}
             </div>
         </div>
-        <WrapList></WrapList>
+        <WrapList :theList="gettheLists"></WrapList>
     </div>
 </template>
 
 <script>
-import WrapList from './ProList.vue'
+import WrapList from './WrapList.vue'
+import axios from 'axios'
 export default {
-     components:{
-         WrapList
-     }
+    props:{
+        routerList:{
+            type:String
+        },
+        gitListss:{
+            type:Array
+        }
+    },
+    data(){
+        return{
+            theList:[
+                "北京",
+                "全部时间",
+                "推荐排序",
+                "距离最近",
+            ],
+            getLists:[]
+        }
+    },
+    computed:{
+        gettheLists(){
+            if(this.gitListss.length!=0){
+                return this.gitListss
+            }else{
+                return this.getLists
+            }
+        }
+    },
+    components:{
+        WrapList
+    },
+    methods:{
+        getList(){
+            let thisJson = '/json/'+this.routerList+'.json'
+            axios.get(thisJson).then(res=>{
+                let data = res.data;
+                this.getLists = data.data.projectInfo;
+            })
+        },
+    },
+    created(){
+        this.getList();
+    },
 }
 </script>
 
@@ -41,6 +82,7 @@ export default {
             align-items: center;
             background-color: #f5f5f5;
             font-size: 12px;
+            z-index: 999;
             .miu-title-item{
                 
             }
